@@ -1,5 +1,5 @@
-require_relative './nameable'
-require_relative './rent'
+require_relative 'nameable'
+require_relative 'rent'
 
 class Person < Nameable
   def initialize(id, age, name = 'Unknown', parent_permission: true)
