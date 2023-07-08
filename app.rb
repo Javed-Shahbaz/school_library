@@ -13,9 +13,9 @@ class App
 
   def list_all_books
     if @books_list.empty?
-      puts 'No record found! Add some books...'
+      puts 'No Book Found!'
     else
-      puts 'Available books in the library'
+      puts 'Books Available in the library'
       @books_list.each { |books| puts "Title: #{books.title}, Author: #{books.author}" }
     end
     @parent.show_menu
@@ -23,9 +23,9 @@ class App
 
   def list_all_people
     if @people_list.empty?
-      puts 'No record found! Add a person...'
+      puts 'No Person Found!'
     else
-      puts 'All people in the library'
+      puts 'People in the library'
       @people_list.each do |person|
         puts "[#{person.class}] Name: #{person.name}, ID: #{person.id}, Age: #{person.age}"
       end
@@ -34,7 +34,7 @@ class App
   end
 
   def create_person
-    print 'Do you want to create a student(1) or a teacher(2)? [Input the number]: '
+    print 'Do 'You Want to Create a Student(1) or a Teacher(2)? [Input the number]: '
     person_role = gets.chomp
     case person_role
     when '1'
@@ -42,7 +42,7 @@ class App
     when '2'
       create_teacher
     else
-      puts 'Please add a valid input!'
+      puts 'Please Enter a valid Number!'
     end
     @parent.show_menu
   end
@@ -52,11 +52,11 @@ class App
     age = gets.chomp.to_i
     print 'Name: '
     name = gets.chomp
-    print 'Has parent permission? [Y/N]: '
+    print 'Has Parent Permission? [Y/N]: '
     parent_permission = gets.chomp.downcase == 'y'
     @people_list.push(Student.new(age, name, parent_permission: parent_permission))
     puts
-    puts 'Person created successfuly'
+    puts 'Student Created Successfuly'
   end
 
   def create_teacher
@@ -68,7 +68,7 @@ class App
     specialization = gets.chomp
     @people_list.push(Teacher.new(age, specialization, name))
     puts
-    puts 'Person created successfuly'
+    puts 'Teacher Created Successfuly'
   end
 
   def create_book
@@ -77,12 +77,12 @@ class App
     print 'Author: '
     author = gets.chomp
     @books_list.push(Book.new(title, author))
-    puts 'Book created successfully'
+    puts 'Add Book successfully'
     @parent.show_menu
   end
 
   def create_rent
-    puts 'Select a book from the following list by number'
+    puts 'Select a book from list by number'
     @books_list.each_with_index { |books, index| puts "#{index}) Title: '#{books.title}', Author: #{books.author}" }
     book_num = gets.chomp.to_i
     puts
@@ -95,7 +95,7 @@ class App
     print 'Date: '
     date = gets.chomp
     @rents_list.push(rent.new(date, @books_list[book_num], @people_list[person_num]))
-    puts 'rent created successfully'
+    puts 'Rent Created Successfully'
     @parent.show_menu
   end
 
@@ -111,6 +111,6 @@ class App
   end
 
   def exit
-    puts 'Thank you for using the app, see you later!'
+    puts 'Thanks for Using Library App.'
   end
 end
