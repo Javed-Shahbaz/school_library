@@ -1,4 +1,5 @@
-require './nameable'
+require_relative './nameable'
+require_relative './rent'
 
 class Person < Nameable
   def initialize(id, age, name = 'Unknown', parent_permission: true)
@@ -23,5 +24,10 @@ class Person < Nameable
 
   def of_age
     @age >= 18
+  end
+
+  def ad_rent(rent)
+    @rentals.push(rent)
+    rent.person = self
   end
 end
