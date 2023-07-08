@@ -5,13 +5,13 @@ class Options
     @app = App.new(self)
 
     puts
-    puts 'WELCOME TO THE SCHOOL LIBRARY APP!'
+    puts 'WELCOME TO LIBRARY'
     show_menu
   end
 
   def show_menu
     puts
-    puts 'Please choose an option by entering a number:'
+    puts 'Please choose a number:'
     puts '1 -  List all books'
     puts '2 -  List all people'
     puts '3 -  Create a person'
@@ -37,7 +37,7 @@ class Options
 
     method = options[user_choice]
     if method.nil?
-      puts 'Invalid option, please try again!'
+      puts 'Invalid Option, Please Choose Correct Number!'
       puts
       show_menu
     else
