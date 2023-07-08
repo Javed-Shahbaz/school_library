@@ -105,7 +105,7 @@ class App
 
     puts 'rents:'
     @rents_list.each do |rent|
-      puts "Date: #{rent.date}, Book \"#{rent.book.title}\" by #{rent.book.author}" if rent.person.id == id
+      puts "Date: #{rent.date}, Book \"#{rent.books.title}\" by #{rent.books.author}" if rent.person.id == id
     end
     @parent.show_menu
   end
