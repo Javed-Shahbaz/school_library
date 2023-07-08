@@ -1,5 +1,5 @@
 require './person'
-require './decorator'
+require './decorate'
 
 person = Person.new(1, 22, 'maximilianus')
 puts person.correct_name
