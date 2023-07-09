@@ -1,7 +1,7 @@
 require './student'
 require './teacher'
-require './books'
-require './rent'
+require './book'
+require './rental'
 
 class App
   def initialize(parent)
@@ -16,7 +16,7 @@ class App
       puts 'No record found! Add some books...'
     else
       puts 'Available books in the library'
-      @books_list.each { |books| puts "Title: #{books.title}, Author: #{book.author}" }
+      @books_list.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
     end
     @parent.show_menu
   end
@@ -83,7 +83,7 @@ class App
 
   def create_rental
     puts 'Select a book from the following list by number'
-    @books_list.each_with_index { |_books, index| puts "#{index}) Title: '#{book.title}', Author: #{book.author}" }
+    @books_list.each_with_index { |book, index| puts "#{index}) Title: '#{book.title}', Author: #{book.author}" }
     book_num = gets.chomp.to_i
     puts
     puts 'Select a person from the following list by number (not id)'
@@ -105,7 +105,7 @@ class App
 
     puts 'Rentals:'
     @rentals_list.each do |rental|
-      puts "Date: #{rental.date}, Book \"#{rental.books.title}\" by #{rental.books.author}" if rental.person.id == id
+      puts "Date: #{rental.date}, Book \"#{rental.book.title}\" by #{rental.book.author}" if rental.person.id == id
     end
     @parent.show_menu
   end
