@@ -20,6 +20,8 @@
   - [👥 Authors ](#-authors-)
   - [🔭 Future Features ](#-future-features-)
   - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support](#support)
+  - [🙏 Acknowledgements](#acknowledgements)
   - [📝 License ](#-license-)
 
 # 📖 School Library <a name="about-project">School Library</a>
@@ -112,14 +114,11 @@ rubocop
 
 Contributions, issues, and feature requests are welcome!
 
-Feel free to check the [issues page](https://github.com/Javed-Shahbaz/school_library.git/issues).
-
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
-
 
 ## ⭐️ Show your support <a name="support"></a>
 
-If you like this project... Give it a Star
+If you like this project please follow me to find more project of this type in future.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
