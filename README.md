@@ -125,7 +125,7 @@ If you like this project please follow me to find more project of this type in f
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-We would like to thank the Microverse team for the learning opportunity
+I would like to thank the Microverse team for the learning opportunity
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
