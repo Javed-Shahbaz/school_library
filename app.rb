@@ -1,7 +1,7 @@
 require './student'
 require './teacher'
-require './book'
-require './rental'
+require './books'
+require './rent'
 
 class App
   def initialize(parent)
@@ -16,7 +16,7 @@ class App
       puts 'No record found! Add some books...'
     else
       puts 'Available books in the library'
-      @books_list.each { |book| puts "Title: #{book.title}, Author: #{book.author}" }
+      @books_list.each { |books| puts "Title: #{books.title}, Author: #{book.author}" }
     end
     @parent.show_menu
   end
